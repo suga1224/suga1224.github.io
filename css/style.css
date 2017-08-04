@@ -149,7 +149,9 @@ max-width: 850px;
   margin:0 auto;
   padding: 15px;
 }
-
+.batu{
+  font-size: 12px;
+}
 
 /* サイドメニューオープン */
 .side-open .wrapper,
