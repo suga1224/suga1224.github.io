@@ -143,6 +143,11 @@ max-width: 850px;
   padding: 150px 0;
   background: #fff;
 }
+.contents_inner{
+  width: 100%;
+  max-width: 850px;
+  margin:0 auto;
+}
 
 
 /* サイドメニューオープン */
