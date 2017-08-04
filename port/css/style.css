@@ -1,0 +1,157 @@
+
+
+/*試作２のCSSここから*/
+/* サイドオープン時にメインコンテンツを覆う部分 */
+.overlay {
+  content: '';
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /*background: rgba(0,0,0,0);*/
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  z-index: 3;
+}
+.overlay::after {
+  content: "satouhiroki portfolio";
+  visibility: hidden;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 50px;
+  color: rgba(255,255,255,0);
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.side-open .overlay {
+  visibility: visible;
+  cursor: pointer;
+  background: rgba(0,0,0,.7);
+}
+.side-open .overlay::after {
+  visibility: visible;
+  color: rgba(255,255,255,.8);
+}
+
+/* サイドメニュー ※リストのスタイルは省略 */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  /*width: 100%;*/
+  max-width: 850px;
+  height: 100%;
+  padding-top: 150px;
+  text-align: left;
+  font-size:23px;
+  background: #2A408E;
+  z-index: 1;
+}
+
+/* 開閉用ボタン ※ボタンの細かいスタイルは省略 */
+.side-menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background: #ccc;
+  cursor: pointer;
+  z-index: 4;
+  /*width:100%;*/
+max-width: 850px;
+}
+
+/* メインコンテンツ */
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 13px;
+  background: #F8F8F8;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  z-index: 2;
+}
+.grid {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #F8F8F8;
+
+    /*opacity: 0.5;*/
+}
+.grid-item {
+    margin: 10px;
+    /*background-color: red*/
+    /*width:100%;*/
+    padding:20px;
+    background-color: #eee;
+    border-top: 1px #666 solid;
+    border-left: 1px #666 solid;
+    /*left:50%;
+    transform: translate(-50%,0);*/
+
+}
+
+.grid-item:hover{
+  background-color: #ddd;
+}
+/* メインコンテンツ内のスタイル ※デザインに併せて適当に */
+.header {
+  padding: 100px 0;
+  background: #161616;
+  color: #fff;
+}
+.header img{
+  width:100%;
+  max-width: 850px;
+  height: auto;
+}
+.top_profile{
+  font-size: 50px;
+}
+.skill{
+  color: rgb(182, 25, 36);
+}
+.header h1,
+.contents h1 {
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+.contents {
+  width: 100%;
+  padding: 150px 0;
+  background: #f5f5f5;
+}
+.contents p {
+  margin-bottom: 50px;
+}
+.footer {
+  padding: 150px 0;
+  background: #fff;
+}
+.contents_inner{
+  width: 100%;
+  max-width: 850px;
+}
+
+
+/* サイドメニューオープン */
+.side-open .wrapper,
+.side-open .overlay {
+  -webkit-transform: translate3d(-300px, 0, 0);
+  transform: translate3d(-300px, 0, 0);
+}
